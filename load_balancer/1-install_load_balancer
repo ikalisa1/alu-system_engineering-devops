@@ -35,13 +35,13 @@ defaults
   timeout http-request 10s
 
 frontend webkalisa-tech-frontend
-    bind *:8080
+    bind *:80
     default_backend webkalisa-tech-backend
 
 backend webkalisa-tech-backend
     balance roundrobin
-    server 6062-web-01 18.206.236.38:8080 check
-    server 6062-web-02 3.80.74.31:8080 check
+    server 6062-web-01 18.206.236.38:80 check
+    server 6062-web-02 3.80.74.31:80 check
 "
 
 # shellcheck disable=SC2154
